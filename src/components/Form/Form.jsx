@@ -24,7 +24,7 @@ const Form = ({login}) => {
     setErrors(error);
 
     if (Object.keys(error).length === 0) { //se verifica si el error tiene o no propiedades para proceder a setear nuevamente el error en un objeto vacio
-      // Realiza la lógica adicional en caso de que el formulario sea válido
+      
       setErrors({});
     }
   };

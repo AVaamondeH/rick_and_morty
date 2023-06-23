@@ -1,4 +1,59 @@
+/* About.module.css */
+
 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    background-color: red;
-}
+  }
+  
+  .card {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 500px;
+    height: 200px;
+  }
+  
+  .profileImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .cardContent {
+    flex-grow: 1;
+  }
+  
+  .name {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+  }
+  
+  .description {
+    margin-bottom: 20px;
+  }
+  
+  .socialLinks {
+    display: flex;
+  }
+  
+  .socialLink {
+    margin-right: 10px;
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  .socialLink i {
+    transition: color 0.3s;
+  }
+  
+  .socialLink i:hover {
+    color: #666;
+  }
+  
