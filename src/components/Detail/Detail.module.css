@@ -1,0 +1,44 @@
+.card {
+  
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  margin: 3% 0 0 0;
+  left: 38%;
+  padding: 4%;
+  background: linear-gradient(70deg, #9ef87f, #d5e3c8);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #0a0a0a;
+  position: absolute;
+
+    
+    & .img {
+       width: 200px;
+       height: 200px;
+       object-fit: cover;
+       border-radius: 50%;
+       margin-bottom: 10px;
+     }
+     
+     & .name {
+       font-size: 24px;
+       margin-bottom: 10px;
+       color: rgb(0, 0, 0);
+     }
+     
+    & .from {
+       margin-top: 20px;
+       font-style: italic;
+     }
+     
+    & h3 {
+       font-size: 20px;
+       margin-bottom: 5px;
+     }
+  }
+  
+  

@@ -1,0 +1,54 @@
+.bar {
+    display: flex;
+    justify-content: center;
+  
+    & .barDiv1 {
+      color: white;
+      border-radius: 5px;
+      margin: 0 10px;
+      padding: 5px 0;
+      
+      & input {
+        background: linear-gradient(10deg, #05db0c, #1D2A10);
+        color: #000000;
+        border-radius: 8px;
+        border-color: transparent;
+        place-content: rgb(0, 0, 0);
+        box-shadow: 0 0 0 2px #000000;
+        width: 100%;
+        border: 1px solid #ccc;
+        
+      }
+    
+      & input::placeholder {
+        color: #000000;
+      }
+    
+    }
+  
+    & .barDiv2 {
+      padding: 5px 20px;
+      background: linear-gradient(10deg, #9ef87f, #d5e3c8);
+      color: black;
+      border-radius: 5px;
+      margin: 0 10px;
+      user-select: none;
+      cursor: pointer;
+  
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+    
+    & input:focus {
+      border-color: #ff0000;
+      box-shadow: 0 0 1px #ff0000;
+    }
+  
+  
+  }
+  
+
+
+  

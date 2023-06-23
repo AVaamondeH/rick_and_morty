@@ -1,0 +1,52 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    padding: 1.5%;
+    
+  & .links {
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px 20px;
+    background: linear-gradient(10deg, #9ef87f, #d5e3c8);
+    color: black;
+    border-radius: 5px;
+    margin: 0 20px;
+    user-select: none;
+    cursor: pointer;
+    
+    &:hover {
+      background: rgb(115, 252, 91);
+      color: black;
+      user-select: none;
+    }
+  }
+  
+  & .NavLink {
+    text-decoration: none;
+    color: black;
+
+  }
+  
+  & .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  & .logout {
+    padding: 5px 20px;
+    background: linear-gradient(10deg, #9ef87f, #d5e3c8);
+    color: black;
+    border-radius: 5px;
+    margin: 0 20px;
+    user-select: none;
+    cursor: pointer;
+    
+      &:hover {
+          background: red;
+          color: rgb(255, 255, 255);
+        }
+      
+  }
+}

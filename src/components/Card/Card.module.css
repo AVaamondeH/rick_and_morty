@@ -1,0 +1,105 @@
+.card {
+  width: 15rem;
+  height: 100%;
+  margin: 3% 8px 0 0;
+  padding-bottom: 300px;
+  background: linear-gradient(70deg, #9ef87f, #d5e3c8);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: black;
+  position: relative;
+  perspective: 500px;
+  transform-style: preserve-3d;
+  transition: transform 1s
+
+  
+}
+
+.fav {
+  position: absolute;
+  width: 12%;
+  font-size: 1.3rem;
+  z-index: 20;
+  user-select: none;
+}
+
+  .front,
+  .back {
+    overflow: hidden;
+    position: absolute;
+    backface-visibility: hidden;
+    user-select: none;
+    
+
+  }
+
+  .front {
+
+
+    & img {
+      position: relative;
+      width: 100%;
+      height: 80%;
+      z-index: -1;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+       
+    }
+    
+    & h3 {
+    
+      font-size: 1rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      text-decoration: none;
+      /* text-overflow: ellipsis; */
+    }
+
+    & .close {
+      position: absolute;
+      left: 223px;
+      top: -3px;
+      color: #ff0000; /* Color rojo */
+      border: none;
+      z-index: 10;
+      font-size: 20px;
+      cursor: pointer;
+
+        &:hover {
+          color: #ff4d4d; /* Un tono más oscuro de rojo */
+        }
+    }
+
+    
+
+
+    
+    
+  }
+
+  .back {
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+    margin-top: 25px;
+
+    & h3 {
+      display: flex;
+      justify-content: center;
+    }
+
+
+  }
+
+
+  .links {
+    text-decoration: none;
+    color: black;
+  }
+
+  .more {
+    font-size: .8rem;
+    color: rgb(37, 147, 220);
+  }
+
+  

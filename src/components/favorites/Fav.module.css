@@ -1,0 +1,19 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0 3%;
+    perspective: 1000px;
+}
+
+/* .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1rem;
+    
+    row-gap: 12rem;
+    justify-items: center; 
+    margin: 0 3%;
+    perspective: 5000px;
+  } */
