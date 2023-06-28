@@ -38,7 +38,7 @@ function App() {
     if (exists) {
       alert('¡El personaje ya está en la lista!');
     } else {
-      axios(`https://rickandmortyapi.com/api/character/${id}`)
+      axios(`http://127.0.0.1:3001/rickandmorty/character/${id}`)
         .then(({ data }) => {
           if (data.name) {
               setCharacters(oldChars => [...oldChars, data]);

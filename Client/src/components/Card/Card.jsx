@@ -2,7 +2,7 @@ import style from "./Card.module.css"
 import { NavLink } from "react-router-dom"
 import "./transition.css"
 import {useEffect, useState } from "react"
-import { addFav, removeFav } from "../../redux/actions"
+import { addFav, removeFav } from "../../Redux/actions"
 import { AiFillCloseSquare } from "react-icons/ai"
 import { connect } from "react-redux"
 

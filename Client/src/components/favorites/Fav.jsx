@@ -3,7 +3,7 @@ import Card from '../Card/Card';
 import Style from "./Fav.module.css"
 import { CSSTransition } from "react-transition-group"
 import { useState } from "react"
-import { filterCards, orderCards } from '../../redux/actions';
+import { filterCards, orderCards } from '../../Redux/actions';
 
 
 function Fav() {
