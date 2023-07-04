@@ -16,19 +16,26 @@ function App() {
   
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
-  const EMAIL = 'rick@gmail.com';
-  const PASSWORD = 'Pass123';
+  // function login(userData) { //Login recive la data de el form para validar con la base de datos ficticia
+  //   if (userData.password === PASSWORD && userData.email === EMAIL) {
+  //       setAccess(true);
+  //       navigate('/home'); // si todo coincide el navigate te dirige al /home
+  //   }
+  // }
 
-  function login(userData) { //Login recive la data de el form para validar con la base de datos ficticia
-    if (userData.password === PASSWORD && userData.email === EMAIL) {
-        setAccess(true);
-        navigate('/home'); // si todo coincide el navigate te dirige al /home
-    }
-  }
+function login(userData) {
+    const { email, password } = userData;
+    const URL = 'http://localhost:3001/rickandmorty/login/';
+    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+       const { access } = data;
+       setAccess(data);
+       access && navigate('/home');
+    });
+ }
 
   useEffect(() => { //Este use  effect mantiene montado el componente form o login hastaq eu sean validos el email y contraseña
     !access && navigate('/');
- }, [access, navigate]);
+  }, [access, navigate]);
   
   //Con esto controlamos el generador de tarjetas de forma manual
   const [character, setCharacters] = useState([]);
@@ -40,6 +47,7 @@ function App() {
     } else {
       axios(`http://127.0.0.1:3001/rickandmorty/character/${id}`)
         .then(({ data }) => {
+          console.log(data);
           if (data.name) {
               setCharacters(oldChars => [...oldChars, data]);
           } else {
@@ -66,15 +74,14 @@ function App() {
     }
 
 
-   const onClose = (id) => {
+  const onClose = (id) => {
       setCharacters((characters) =>
         characters.filter((character) => character.id !== parseInt(id))
       );
     };
     
       
-   
-   return (
+  return (
       <div className='App'>
         <ParticlesBackground />
         <Nav onSearch = {onSearch}  onRandom={onRandom} setAccess={setAccess}/>
@@ -90,7 +97,7 @@ function App() {
         </Routes>
 
         </div>
-   );
+  );
 }
 
 export default App;

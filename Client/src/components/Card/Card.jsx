@@ -69,15 +69,14 @@ function Card({id, name, status, species, gender, origin, image, onClose, onClic
                   <h3>Species: {species}</h3>
                   <h3>Gender: {gender}</h3>
                   <h3 className={style.from} >From: {origin}</h3>
-                  <NavLink 
-                     to={`/detail/${id}`} 
-                     className={style.links}>
-                        <h3 className={style.more} >more...</h3>
-                  </NavLink> 
-                  
+                     <NavLink 
+                        to={`/detail/${id}`} 
+                        className={style.links}>
+                           <h3 className={style.more} >more...</h3>
+                     </NavLink>
                   
                </div>
-  
+               
       </div>
    );
 }
