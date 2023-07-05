@@ -57,7 +57,7 @@ function Fav() {
                      status={status}
                      species={species}
                      gender={gender}
-                     origin={origin.name}
+                     origin={origin?.name}
                      image={image}
                      onClose={() => onClose(id)}
                      onClick={() => handleClick(id)}

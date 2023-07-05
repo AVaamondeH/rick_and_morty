@@ -1,9 +1,16 @@
 let myFavorites = [];
 
 const postFav = (req, res) => {
-    myFavorites.push(req.body)
-
-    return res.status(200).json(myFavorites)
+    
+    try {
+        myFavorites.push(req.body)
+        console.log(req.body);
+    
+        return res.status(200).json(myFavorites)
+        
+    } catch (error) {
+        return res.status(404).json({error: error})
+    }
 }
 
 const deleteFav = (req, res) => {

@@ -23,15 +23,19 @@ function App() {
   //   }
   // }
 
-function login(userData) {
+const login = async (userData) => {
+  try {
     const { email, password } = userData;
     const URL = 'http://localhost:3001/rickandmorty/login/';
-    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
-       const { access } = data;
-       setAccess(data);
-       access && navigate('/home');
-    });
- }
+    const { data } = await axios(`${URL}?email=${email}&password=${password}`)
+    const { access } = data;
+      setAccess(access);
+      access && navigate('/home');
+    
+  } catch (error) {
+    alert("usuario no encontrado")
+  }  
+}
 
   useEffect(() => { //Este use  effect mantiene montado el componente form o login hastaq eu sean validos el email y contraseña
     !access && navigate('/');
@@ -39,26 +43,28 @@ function login(userData) {
   
   //Con esto controlamos el generador de tarjetas de forma manual
   const [character, setCharacters] = useState([]);
-  const onSearch = (id) => {
-  const exists = character.some((character) => character.id === Number(id)); //some se detiene al encontrar la coincidencia
-  
-    if (exists) {
-      alert('¡El personaje ya está en la lista!');
-    } else {
-      axios(`http://127.0.0.1:3001/rickandmorty/character/${id}`)
-        .then(({ data }) => {
-          console.log(data);
-          if (data.name) {
-              setCharacters(oldChars => [...oldChars, data]);
-          } else {
-              alert('¡No hay personajes con este ID!');
-          }
-        })
-        .catch(() => {
-            alert('Error al obtener el personaje. Inténtalo de nuevo más tarde.');
-        });
+  const onSearch = async (id) => {
+    try {
+      const exists = character.some((character) => character.id === Number(id)); //some se detiene al encontrar la coincidencia
+        
+      if (exists) {
+          alert('¡El personaje ya está en la lista!');
+        } else {
+          const { data } = await axios(`http://127.0.0.1:3001/rickandmorty/character/${id}`)
+          const { name } = data
+              //console.log(data);
+        if (name) {
+            setCharacters(oldChars => [...oldChars, data]);
+        } else {
+            alert('¡No hay personajes con este ID!');
+            }
       }
+      
+    } catch (error) {
+      
+      alert('Error al obtener el personaje. Inténtalo de nuevo más tarde.');
     }
+  }
 
     //Con esto controlamos el generador de tarjetas aleatorias
     const onRandom = (randomId) => {
@@ -75,9 +81,10 @@ function login(userData) {
 
 
   const onClose = (id) => {
-      setCharacters((characters) =>
-        characters.filter((character) => character.id !== parseInt(id))
-      );
+    setCharacters((characters) =>
+    characters.filter((character) => character.id !== parseInt(id))
+    );
+    console.log(character)
     };
     
       
@@ -101,3 +108,34 @@ function login(userData) {
 }
 
 export default App;
+
+
+// function login(userData) {
+//   const { email, password } = userData;
+//   const URL = 'http://localhost:3001/rickandmorty/login/';
+//   axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+//      const { access } = data;
+//      setAccess(data);
+//      access && navigate('/home');
+//   });
+// }
+// const onSearch = (id) => {
+// const exists = character.some((character) => character.id === Number(id)); //some se detiene al encontrar la coincidencia
+
+//   if (exists) {
+//     alert('¡El personaje ya está en la lista!');
+//   } else {
+//     axios(`http://127.0.0.1:3001/rickandmorty/character/${id}`)
+//       .then(({ data }) => {
+//         console.log(data);
+//         if (data.name) {
+//             setCharacters(oldChars => [...oldChars, data]);
+//         } else {
+//             alert('¡No hay personajes con este ID!');
+//         }
+//       })
+//       .catch(() => {
+//           alert('Error al obtener el personaje. Inténtalo de nuevo más tarde.');
+//       });
+//     }
+//   }

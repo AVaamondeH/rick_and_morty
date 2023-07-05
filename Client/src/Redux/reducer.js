@@ -16,7 +16,8 @@ const reducer = (state = initialState, action) => {
 
         //     }
         case ADD_FAV:
-            return { ...state, 
+            return { 
+                ...state, 
                 myFavorites: action.payload, 
                 allCharacters: action.payload };
 
@@ -28,7 +29,10 @@ const reducer = (state = initialState, action) => {
         //     }
 
         case REMOVE_FAV:
-            return { ...state, myFavorites: action.payload };
+            return { 
+                ...state, 
+                myFavorites: action.payload,
+            };
 
         case FILTER:
             if(action.payload === "All") {
