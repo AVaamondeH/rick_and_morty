@@ -30,11 +30,11 @@ function Fav() {
    return (
       <div>
          <div>
-            <select onChange={handleOrder}>
+            <select className={Style.option} onChange={handleOrder}>
                <option value="A">Ascendente</option>
                <option value="D">Descendente</option>
             </select>
-            <select onChange={handleFilter}>
+            <select className={Style.option} onChange={handleFilter}>
                <option value="All">All</option>
                <option value="Male">Male</option>
                <option value="Female">Female</option>
@@ -44,7 +44,7 @@ function Fav() {
          </div>
             <div className={Style.cards} >
                {
-              myFavorites?.map(({ id, name, status, species, gender, origin, image, onClose }) => {
+               myFavorites?.map(({ id, name, status, species, gender, origin, image, onClose }) => {
                   return (
                   <CSSTransition
                   in={flip[id]}
@@ -59,7 +59,7 @@ function Fav() {
                      gender={gender}
                      origin={origin?.name}
                      image={image}
-                     onClose={() => onClose(id)}
+                     close={false}
                      onClick={() => handleClick(id)}
                      />
                   </CSSTransition>

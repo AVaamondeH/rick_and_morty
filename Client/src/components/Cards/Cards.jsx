@@ -5,19 +5,19 @@ import { useState } from "react"
 
 
 export default function Cards({characters, onClose} ) {
-   const [flip, setFlip] = useState({});
+  const [flip, setFlip] = useState({});
 
-   const handleClick = (id) => {
+  const handleClick = (id) => {
       setFlip((prevFlip) => ({
         ...prevFlip,
         [id]: !prevFlip[id]
       }))
-   }
-   return (
-   <div className={Style.cards} >
+  }
+  return (
+  <div className={Style.cards} >
       {
       characters.map(({ id, name, status, species, gender, origin, image }) => {
-         return (
+        return (
           <CSSTransition
           in={flip[id]}
           timeout={300}
@@ -33,12 +33,13 @@ export default function Cards({characters, onClose} ) {
               image={image}
               onClose={() => onClose(id)}
               onClick={() => handleClick(id)}
+              close={true}
             />
           </CSSTransition>
-         );
-       })
+        );
+      })
       }
-   </div> 
-   )   
+  </div> 
+  )   
 }
 

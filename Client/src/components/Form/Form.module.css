@@ -1,22 +1,29 @@
 .container {
+  z-index: -1;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     
     & .form {
-      background: #1D2A10;
+      backdrop-filter: blur(20px);
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 300px;
-      height: 70%;
-      padding: 5%;
+      width: 250px;
+      height: 60%;
+      padding: 3% 5% 5% 5%;
       border: 1px solid #ccc;
       border-radius: 4px;
-      background-image: url("../../resourses/bg.png");
-      background-size: cover;
-      background-position: center;
+
+      & .loginImg {
+        position: absolute;
+        display: flex;
+        width: 80%;
+        height: 45%;
+        border-radius: 50%;
+        /* margin-right: 20px; */
+      }
 
 
       & .info {
@@ -26,11 +33,13 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        top: 5%;
-        align-content: flex-end;
+        top: 30%;
+        align-content: center;
 
 
-
+        & .title {
+          color: white
+        }
 
         & .label {
           width: 100%;
@@ -66,10 +75,7 @@
           cursor: not-allowed;
         }
       }
-
-  
     }
-
   }
   
 

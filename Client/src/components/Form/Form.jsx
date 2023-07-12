@@ -38,6 +38,11 @@ const Form = ({login}) => {
   return (
     <div className={style.container}>
       <form className={style.form} onSubmit={handleOnSubmit}>
+      <img
+          src="https://i.imgur.com/TVmQgmq.png"
+          alt="Login"
+          className={style.loginImg}
+        />
             <div className={style.info} >
             <h1 className={style.title}>Bienvenidos</h1>
             
@@ -52,7 +57,7 @@ const Form = ({login}) => {
             
             <input
             name="password"
-            type="text"
+            type="password"
             placeholder="Ingrese una contraseña"
             value={userData.password}
             onChange={handleChange}

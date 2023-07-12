@@ -1,9 +1,38 @@
-.nav {
+.container {
+  display: flex;
+  flex-direction:column;
+  padding-top: 5px;
+  backdrop-filter: blur(2px);
+  
+}
+
+.img {
+  margin-top: 1%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  
+  
+  & img {
+    position: relative;
+    display: flex;
+    width: 35%;
+    margin-bottom: 3%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imgContainer {
+    position: relative;
     display: flex;
     justify-content: center;
-    padding: 1.5%;
-    
+    left: -7%;
+    z-index: -1;
+
+  }
   & .links {
+    z-index: 2;
     display: flex;
     justify-content: flex-start;
     padding: 5px 20px;
@@ -24,6 +53,13 @@
   & .NavLink {
     text-decoration: none;
     color: black;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    padding: 1.5%;
+    
 
   }
   

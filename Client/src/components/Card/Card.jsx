@@ -6,7 +6,7 @@ import { addFav, removeFav } from "../../Redux/actions"
 import { AiFillCloseSquare } from "react-icons/ai"
 import { connect } from "react-redux"
 
-function Card({id, name, status, species, gender, origin, image, onClose, onClick, addFav, removeFav, myFav}) {
+function Card({id, name, status, species, gender, origin, image, onClose, onClick, addFav, removeFav, myFav, close}) {
    const [isFav, setIsFav] = useState(false);
    
    useEffect(() => {
@@ -28,9 +28,8 @@ function Card({id, name, status, species, gender, origin, image, onClose, onClic
       }
    }
    
-   
    useEffect(() => { //Se utiliza el useEffect para que cuando se monte el compoente se ejecute una vez onclick para las transiciones
-      onClick();
+      close && onClick();
       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, []);
 
@@ -47,24 +46,18 @@ function Card({id, name, status, species, gender, origin, image, onClose, onClic
                <div 
                   className={style.front}
                   onClick={onClick} >
+                     {close &&( 
                      <div >
-                  
-                     <AiFillCloseSquare onClick={() => onClose(id)} className={style.close}/> 
-                  </div>
+                        <AiFillCloseSquare onClick={() => onClose(id)} className={style.close}/> 
+                     </div>) }
                   <img 
                      src={image} alt='' 
-                     className={style.img} 
-                      />
+                     className={style.img}
+                     />
                   <h3 className="card-name">{name}</h3>     
                </div>
                <div className={style.back} onClick={onClick}>
-                     <NavLink 
-                     to={`/detail/${id}`} 
-                     className={style.links}
-                     >
                         <h3 className="card-name">{name}</h3>
-                     </NavLink>
-
                   <h3>Status: {status}</h3>
                   <h3>Species: {species}</h3>
                   <h3>Gender: {gender}</h3>

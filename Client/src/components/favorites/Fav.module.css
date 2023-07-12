@@ -7,6 +7,16 @@
     perspective: 1000px;
 }
 
+.option {
+    background: linear-gradient(70deg, #9ef87f, #d5e3c8);
+    color: #000000;
+    border-radius: 8px;
+    border-color: transparent;
+    place-content: rgb(0, 0, 0);
+    box-shadow: 0 0 0 2px #000000;  
+    margin: 1%;
+    border: 1px solid #ccc;
+}
 /* .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));

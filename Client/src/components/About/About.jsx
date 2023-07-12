@@ -8,16 +8,14 @@ const About = () => {
         <div className={styles.container}>
       <div className={styles.card}>
         <img
-          src="../../resourses/profile.png"
+          src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1ea08e12-847b-4c43-8433-ff86b833fd7b/dfhm5og-95de576c-86eb-49ab-ad37-a9cb02ef0853.png/v1/fill/w_389,h_400,q_70,strp/jinx__arcane__by_blue_leader97_dfhm5og-400t.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzFlYTA4ZTEyLTg0N2ItNGM0My04NDMzLWZmODZiODMzZmQ3YlwvZGZobTVvZy05NWRlNTc2Yy04NmViLTQ5YWItYWQzNy1hOWNiMDJlZjA4NTMucG5nIiwid2lkdGgiOiI8PTEyNDUifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ._YYKfnTX_egwrxPgJhq65nB88k7GAICdxiY24x5OYX0"
           alt="Profile"
           className={styles.profileImage}
         />
         <div className={styles.cardContent}>
-          <h2 className={styles.name}>Nombre</h2>
+          <h2 className={styles.name}>Alex Vaamonde</h2>
           <p className={styles.description}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            aliquam sagittis nisi, vel eleifend turpis facilisis et. Duis vitae
-            mattis lectus, id consequat ex. Donec non fermentum elit.
+            Hola soy Alex y estoy en mi camino por convertirme en programador, un gusto.
           </p>
           <div className={styles.socialLinks}>
             <a href="#" className={styles.socialLink}>
