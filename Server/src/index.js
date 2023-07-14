@@ -23,6 +23,8 @@ const express = require('express');
 const server = express();
 const PORT = 3001;
 const routes = require("./routes/index")
+const { database } = require("./DB_connection")
+
 
 
 server.use((req, res, next) => {
@@ -42,8 +44,11 @@ server.use((req, res, next) => {
 server.use(express.json());
         
 server.use("/rickandmorty", routes);
-        
-server.listen(PORT, () => {
-    console.log('Server raised in port: ' + PORT);
-});
+
+database.sync({force: true}).then(() => 
+    server.listen(PORT, () => {
+        console.log('Server raised in port: ' + PORT);
+    })
+)
+    
 

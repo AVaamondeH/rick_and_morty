@@ -1,15 +1,24 @@
-let myFavorites = [];
+const {Favorite} = require("../DB_connection")
 
-const postFav = (req, res) => {
+//let myFavorites = [];
+
+const postFav = async (req, res) => {
     
     try {
-        myFavorites.push(req.body)
-        console.log(req.body);
-    
-        return res.status(200).json(myFavorites)
+        const { id, name, status, species, gender, origin, image} = req.body
+        const newFavorite = await Favorite.create({
+            id,
+            name,
+            status,
+            species,
+            gender,
+            origin,
+            image
+        })
+        return res.status(200).json(newFavorite)
         
     } catch (error) {
-        return res.status(404).json({error: error})
+        return res.status(404).json({error: error.message})
     }
 }
 
