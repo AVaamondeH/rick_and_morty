@@ -1,6 +1,7 @@
 # Rick and Morty API Explorer
 
-![Video Demo](https://img.youtube.com/vi/tpbGX-p-fvY/0.jpg)](https://www.youtube.com/watch?v=tpbGX-p-fvY)
+[![Alt text](https://img.youtube.com/vi/tpbGX-p-fvY/0.jpg)](https://www.youtube.com/watch?v=tpbGX-p-fvY)
+
 
 
 An web application that allows you to explore all the information from the Rick and Morty API. This application is built with React, Redux, Node.js, Express, and PostgreSQL using Sequelize.
