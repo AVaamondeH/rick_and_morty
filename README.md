@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Rick and Morty API Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Project Demo](https://youtu.be/tpbGX-p-fvY)
 
-## Available Scripts
+An web application that allows you to explore all the information from the Rick and Morty API. This application is built with React, Redux, Node.js, Express, and PostgreSQL using Sequelize.
 
-In the project directory, you can run:
+## Key Features
 
-### `npm start`
+- Search and filter characters, episodes, and locations from the series.
+- View detailed information about each character, episode, or location.
+- Perform advanced searches and save your favorite results.
+- [Link to Rick and Morty API](https://rickandmortyapi.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Screenshots
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Screenshot 1](https://drive.google.com/file/d/1yO7PbFeGH7d0-YDkTu_8wD0Ku89R_J_e/view?usp=sharing)
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Make sure you have Node.js and PostgreSQL installed on your system.
 
-### `npm run build`
+1. **Clone the repository**:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Enter the project directory**:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Install dependencies for both the client and server**:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Configure PostgreSQL database**. Ensure you have a running PostgreSQL server and adjust the database configuration in `server/config/config.json`.
 
-### `npm run eject`
+5. **Run migrations** to create database tables:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+6. **Start the application**:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+7. **Open your browser and visit** `http://localhost:3000` to see the application in action.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Explore the Rick and Morty API easily:
 
-## Learn More
+1. **Use the search bar** to find specific characters, episodes, or locations.
+2. **Click on a result** to see more details.
+3. Have fun exploring the Rick and Morty universe!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For questions or suggestions, you can contact me at [alexxherrera2772@gmail.com] or follow me on LinkedIn [Alex Vaamonde](https://www.linkedin.com/in/alexxvaam/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
