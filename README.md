@@ -1,6 +1,7 @@
 # Rick and Morty API Explorer
+**Preview Video**:
 
-[![Alt text](https://img.youtube.com/vi/tpbGX-p-fvY/0.jpg)](https://www.youtube.com/watch?v=tpbGX-p-fvY)
+  [![Alt text](https://img.youtube.com/vi/tpbGX-p-fvY/0.jpg)](https://www.youtube.com/watch?v=tpbGX-p-fvY)
 
 
 
@@ -12,10 +13,10 @@ An web application that allows you to explore all the information from the Rick 
 - View detailed information about each character, episode, or location.
 - Perform advanced searches and save your favorite results.
 - [Link to Rick and Morty API](https://rickandmortyapi.com/)
-
+https://drive.google.com/file/d/1yO7PbFeGH7d0-YDkTu_8wD0Ku89R_J_e/view?usp=sharing
 ## Screenshots
 
-![Screenshot 1](https://drive.google.com/file/d/1yO7PbFeGH7d0-YDkTu_8wD0Ku89R_J_e/view?usp=drive_link)
+<a href="https://drive.google.com/uc?export=view&id=1rsDyW-0w6hMiSgL86dd8mAlld-9vTEUQ"><img src="https://drive.google.com/uc?export=view&id=1rsDyW-0w6hMiSgL86dd8mAlld-9vTEUQ" style="width: 650px; max-width: 100%; height: auto" title="Click to enlarge picture" />
 
 ## Installation
 
