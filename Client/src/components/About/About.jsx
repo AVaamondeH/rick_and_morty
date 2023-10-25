@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import styles from "./About.module.css"
 import {GrFacebook} from "react-icons/gr"
 import {BsGithub} from "react-icons/bs"
@@ -18,13 +19,13 @@ const About = () => {
             Hola soy Alex y estoy en mi camino por convertirme en programador, un gusto.
           </p>
           <div className={styles.socialLinks}>
-            <a href="#" className={styles.socialLink}>
+            <a href="https://github.com/AVaamondeH" className={styles.socialLink}>
                 <BsGithub/>
             </a>
             <a href="#" className={styles.socialLink}>
                 <GrFacebook/>
             </a>
-            <a href="#" className={styles.socialLink}>
+            <a href="https://www.linkedin.com/in/alexxvaam/" className={styles.socialLink}>
               <BsLinkedin/>
             </a>
           </div>

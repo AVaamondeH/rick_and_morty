@@ -9,7 +9,7 @@ import { filterCards, orderCards } from '../../Redux/actions';
 function Fav() {
    const [flip, setFlip] = useState({});
    const dispatch = useDispatch()
-   const {myFavorites} = useSelector(state => state)
+   const { myFavorites} = useSelector(state => state)
 
    const handleClick = (id) => {
       setFlip((prevFlip) => ({

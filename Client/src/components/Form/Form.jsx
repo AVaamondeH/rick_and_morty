@@ -31,7 +31,7 @@ const Form = ({login}) => {
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-     login(userData)
+      login(userData)
 
   };
 
@@ -47,20 +47,20 @@ const Form = ({login}) => {
             <h1 className={style.title}>Bienvenidos</h1>
             
             <input
-            name="email"
-            type="email"
-            placeholder="Ingrese su email"
-            value={userData.email}
-            onChange={handleChange}
+              name="email"
+              type="email"
+              placeholder="Ingrese su email"
+              value={userData.email}
+              onChange={handleChange}
             />
             {errors.email && <p>{errors.email}</p>}
             
             <input
-            name="password"
-            type="password"
-            placeholder="Ingrese una contraseña"
-            value={userData.password}
-            onChange={handleChange}
+              name="password"
+              type="password"
+              placeholder="Ingrese una contraseña"
+              value={userData.password}
+              onChange={handleChange}
             />
             {errors.password && <p>{errors.password}</p>}
             <button
